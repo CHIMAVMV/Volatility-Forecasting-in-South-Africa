@@ -1,5 +1,5 @@
 """
-Main script — Volatility Forecasting for the South Africa (JSE) Stock Market.
+Main script — Volatility Forecasting for the South African (JSE) Stock Market.
 
 Usage
 -----

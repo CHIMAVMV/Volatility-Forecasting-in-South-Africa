@@ -1,4 +1,4 @@
-# Volatility Forecasting in South Africa Stock Market
+# Volatility Forecasting in the South African (JSE) Stock Market
 
 This project implements a complete **volatility-forecasting pipeline** for equities listed on the
 **Johannesburg Stock Exchange (JSE)** using GARCH-family models.
