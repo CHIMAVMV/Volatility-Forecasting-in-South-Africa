@@ -86,16 +86,14 @@ class GarchModel:
         # Train Model, attach to `self.model`
         self.model = ...
         
-
-    def __clean_prediction():
-    
+    def clean_prediction(self, predicton):
         """Reformat model prediction to JSON.
-
+    
         Parameters
         ----------
         prediction : pd.DataFrame
             Variance from a `ARCHModelForecast`
-
+    
         Returns
         -------
         dict
@@ -103,23 +101,25 @@ class GarchModel:
             Each value is predicted volatility.
         """
         # Calculate forecast start date
+        # Calculate forecast start date
+        start = prediction.index[0] + pd.DateOffset(days=1)
         
-
         # Create date range
+        prediction_dates = pd.bdate_range(start=start, periods=prediction.shape[1])
         
-
         # Create prediction index labels, ISO 8601 format
-        
-
+        prediction_index = [d.isoformat() for d in prediction_dates]
+    
         # Extract predictions from DataFrame, get square root
-        
-
+        data = prediction.values.flatten() ** 0.5
+    
+    
         # Combine `data` and `prediction_index` into Series
+        prediction_formatted.self = pd.Series(data, index=prediction_index)
         
-
+    
         # Return Series as dictionary
-        
-        return ...
+        return prediction_formatted.self.to_dict()
 
     def predict_volatility():
         """Predict volatility using `self.model`
