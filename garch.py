@@ -161,3 +161,17 @@ assert hasattr(model_shop, "model")
 
 model_shop.model.summary()
 
+
+
+
+
+from main import PredictIn, PredictOut
+
+pi = PredictIn(ticker="SHOPERSTOP.BSE", n_days=5)
+print(pi)
+
+po = PredictOut(
+    ticker="SHOPERSTOP.BSE", n_days=5, success=True, forecast={}, message="success"
+)
+print(po)
+
