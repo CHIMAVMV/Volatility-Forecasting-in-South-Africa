@@ -186,7 +186,7 @@ class GarchModel:
         pattern = os.path.join(settings.model_directory, f"*{ticker}.pkl")
         # Use glob to get most recent model, handle errors
         try:
-            model_path = sorted(globe(payyern))[-1]
+            model_path = sorted(glob(patern))[-1]
         except IndexError:
             raise Exception(f"No model trained for '{ticker}'.")
         # Load model and attach to `self.model`
